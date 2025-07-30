@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   // Update the site metadata to reflect Edo's personal portfolio.
   // These values are used by the browser and search engines.
-  title: "Edo Galli – Portfolio",
+  title: "edo's portfolio",
   description:
-    "The personal portfolio of Edo Galli, a Bologna‑based software engineer showcasing projects and contact information.",
+      "my portfolio, a software engineer showcasing projects and contact information.",
 };
 
 export default function RootLayout({
@@ -26,9 +26,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    // Attach the `dark` class to the html element so that the dark colour
+    // palette defined in globals.css is used by default. This avoids the
+    // need for a toggle and makes the entire site use the dark theme. The
+    // `min-h-screen` on the body ensures the footer sits at the bottom of
+    // the viewport when there isn’t enough content to push it down.
+    <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
       >
         {children}
       </body>

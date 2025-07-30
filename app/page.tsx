@@ -62,14 +62,23 @@ export default function Home() {
   return (
     <div className="px-6 py-12 max-w-4xl mx-auto font-sans space-y-16">
       {/* Navigation links fixed to the top of the page */}
-      <nav className="flex justify-end gap-6 text-sm sticky top-0 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60 py-4 z-10">
-        <a href="#about" className="hover:underline">
+      <nav className="flex justify-end gap-6 text-sm sticky top-0 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border py-4 z-10">
+        <a
+          href="#about"
+          className="hover:underline transition-colors hover:text-primary"
+        >
           about
         </a>
-        <a href="#projects" className="hover:underline">
+        <a
+          href="#projects"
+          className="hover:underline transition-colors hover:text-primary"
+        >
           projects
         </a>
-        <a href="#contact" className="hover:underline">
+        <a
+          href="#contact"
+          className="hover:underline transition-colors hover:text-primary"
+        >
           contact
         </a>
       </nav>
@@ -95,7 +104,10 @@ export default function Home() {
         <h2 className="text-3xl font-semibold">projects</h2>
         <div className="grid gap-6">
           {projects.map(({ title, description, tags, url }) => (
-            <Card key={title} className="hover:border-ring transition-colors">
+            <Card
+              key={title}
+              className="transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-primary"
+            >
               <CardHeader className="pb-2">
                 <CardTitle>
                   {/* Project title links to the GitHub repository */}
@@ -136,8 +148,8 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="text-center text-xs text-muted-foreground pt-10">
-        © 2025 - All rights reserved.
+      <footer className="mt-20 py-6 border-t border-border text-center text-xs text-muted-foreground">
+        © 2025 – All rights reserved.
       </footer>
     </div>
   );

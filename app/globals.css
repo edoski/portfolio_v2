@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import "../node_modules/tailwindcss/dist/lib.d.mts";
+@import "../node_modules/tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -117,6 +117,24 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    /* Set up a relative positioning context to allow pseudo elements for
+       background effects. The dark palette comes from the `dark` class on
+       <html> added in the root layout. */
+    @apply relative bg-background text-foreground;
   }
+}
+
+/* Add diffused radial lighting to the page using a pseudo element. The
+   gradients use the primary and secondary colours defined in the colour
+   palette. A heavy blur softens the edges creating a gentle glow. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: radial-gradient(circle at 30% 30%, var(--primary) 0%, transparent 60%),
+    radial-gradient(circle at 70% 60%, var(--secondary) 0%, transparent 70%);
+  filter: blur(120px);
+  opacity: 0.2;
 }
