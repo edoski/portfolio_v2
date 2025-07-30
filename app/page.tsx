@@ -17,7 +17,7 @@ const projects = [
   {
     title: "pub-sub",
     description:
-      "(OS course project) a client‑server, terminal‑based, pub‑sub application leveraging java's multithreading capabilities.",
+      "a client‑server, terminal‑based, pub‑sub application leveraging java's multithreading capabilities.",
     tags: ["java", "client-server", "multithreading"],
     url: "https://github.com/edoski/pub-sub",
   },
@@ -31,7 +31,7 @@ const projects = [
   {
     title: "fantasy-cards",
     description:
-      "(university project) a javafx application, where users can save, load, and play a turn‑based fantasy card game.",
+      "a javafx application, where users can save, load, and play a turn‑based fantasy card game.",
     tags: ["java", "javafx", "scenebuilder"],
     url: "https://github.com/edoski/fantasy-cards",
   },
@@ -52,8 +52,8 @@ const projects = [
   {
     title: "portfolio",
     description:
-      "the very website you're currently on; originally in vanilla js, now in react; everything you see here is freely available on my github.",
-    tags: ["javascript", "css", "html"],
+      "the very website you're currently on; available on my github.",
+    tags: ["react", "next.js", "tailwind", "shadcn"],
     url: "https://github.com/edoski/portfolio",
   },
 ];
@@ -80,9 +80,9 @@ export default function Home() {
         {/* Escape quotation marks and apostrophe inside the terminal prompt to satisfy
            the react/no-unescaped-entities rule. */}
         <p className="font-mono text-lg">
-          $ echo &quot;Hello, I&apos;m Edo&quot;
+          $ echo &quot;hi, my name is&quot;
         </p>
-        <h1 className="text-4xl font-semibold">Edo Galli</h1>
+        <h1 className="text-4xl font-semibold">edo.</h1>
         <p className="text-base leading-relaxed text-muted-foreground max-w-prose">
           an ambitious 21‑year‑old software engineer; currently studying computer science at the University of Bologna.
         </p>
@@ -137,7 +137,7 @@ export default function Home() {
       </section>
 
       <footer className="text-center text-xs text-muted-foreground pt-10">
-        © 2024 - All rights reserved.
+        © 2025 - All rights reserved.
       </footer>
     </div>
   );
