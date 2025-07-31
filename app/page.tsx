@@ -139,9 +139,6 @@ export default function Home() {
       <div className="pt-28 px-6 pb-12 max-w-4xl mx-auto font-sans space-y-16">
         {/* About section */}
         <section id="about" className="space-y-4">
-          <p className="font-mono text-sm text-muted-foreground">
-            &gt;_ edo@portfolio
-          </p>
           {/* Escape quotation marks and apostrophe inside the terminal prompt to satisfy the react/no-unescaped-entities rule. */}
           <p className="font-mono text-lg">$ echo &quot;hi, my name is&quot;</p>
           <h1 className="text-4xl font-semibold bg-gradient-to-r from-accent to-primary text-transparent bg-clip-text animate-gradient-x">
