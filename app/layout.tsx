@@ -1,42 +1,35 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import type React from "react"
+import { Inter, JetBrains_Mono } from "next/font/google"
+import "./globals.css"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
-});
+  display: "swap",
+  variable: "--font-inter",
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-});
+  display: "swap",
+  variable: "--font-jetbrains-mono",
+})
 
-export const metadata: Metadata = {
-  // Update the site metadata to reflect Edo's personal portfolio.
-  // These values are used by the browser and search engines.
-  title: "edo's portfolio",
+export const metadata = {
+  title: "edo - Software Engineer Portfolio",
   description:
-      "my portfolio, a software engineer showcasing projects and contact information.",
-};
+    "Portfolio of Edo, an ambitious software engineer studying computer science at the University of Bologna.",
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    // Attach the `dark` class to the html element so that the dark colour
-    // palette defined in globals.css is used by default. This avoids the
-    // need for a toggle and makes the entire site use the dark theme. The
-    // `min-h-screen` on the body ensures the footer sits at the bottom of
-    // the viewport when there isn’t enough content to push it down.
-    <html lang="en" className="dark">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
-      >
+    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}>
+      <body className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-100 min-h-screen">
         {children}
       </body>
     </html>
-  );
+  )
 }
