@@ -25,7 +25,7 @@ export default function Hero() {
       <div className="max-w-4xl mx-auto text-center">
         {/* Terminal Command */}
         <div className="font-mono text-sm md:text-base text-slate-400 mb-8 float">
-          <span className="text-orange-400">$</span> echo "{displayText}"
+          <span className="text-orange-400">$</span> echo &quot;{displayText}&quot;
           <span className="cursor text-orange-400">|</span>
         </div>
 
